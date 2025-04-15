@@ -13,7 +13,7 @@ This tables stores data for all employees except kosmonauts
 | hire_date     | data           |
 | salary        | int            |
 | department_id | int, foreign   |
-| project_id    | int_foreign    |
+| mission_id    | int_foreign    |
 
 ## departments
 This table stores everything related to the different departments
