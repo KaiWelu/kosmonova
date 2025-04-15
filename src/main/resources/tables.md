@@ -2,15 +2,15 @@
 This is the documentation for the tables of the database.
 
 ## employees
-This tables stores data for all employees except kosmonauts
+This tables stores repository for all employees except kosmonauts
 
-| data          | type           |
+| repository          | type           |
 |---------------|----------------|
 | employee_id   | int, primary   |
 | first_name    | string         |
 | last_name     | string         |
 | email         | string, unique |
-| hire_date     | data           |
+| hire_date     | repository           |
 | salary        | int            |
 | department_id | int, foreign   |
 | mission_id    | int_foreign    |
@@ -18,7 +18,7 @@ This tables stores data for all employees except kosmonauts
 ## departments
 This table stores everything related to the different departments
 
-| data          | type         |
+| repository          | type         |
 |---------------|--------------|
 | department_id | int, primary |
 | name          | string       |
@@ -29,7 +29,7 @@ This table stores everything related to the different departments
 ## agencies
 This tables stores information about worldwide space agencies
 
-| data      | type         |
+| repository      | type         |
 |-----------|--------------|
 | agency_id | int, primary |
 | name      | string       |
@@ -40,7 +40,7 @@ This tables stores information about worldwide space agencies
 ## rockets
 This table stores information about different launch vehicles
 
-| data        | type         |
+| repository        | type         |
 |-------------|--------------|
 | rocket_id   | int, primary |
 | name        | string       |
@@ -52,7 +52,7 @@ This table stores information about different launch vehicles
 ## launch sites
 This table stores information about the worldwide launch sites
 
-| data      | type         |
+| repository      | type         |
 |-----------|--------------|
 | site_id   | int, primary |
 | name      | string       |
@@ -64,9 +64,9 @@ This table stores information about the worldwide launch sites
 
 
 ## missions
-This stores data about ongoing projects and their launches
+This stores repository about ongoing projects and their launches
 
-| data        | type         |
+| repository        | type         |
 |-------------|--------------|
 | mission_id  | int, primary |
 | name        | string       |
@@ -77,9 +77,9 @@ This stores data about ongoing projects and their launches
 
 
 ## kosmonauts
-This table stores data about the kosmonauts and their missions
+This table stores repository about the kosmonauts and their missions
 
-| data         | type         |
+| repository         | type         |
 |--------------|--------------|
 | kosmonaut_id | int, primary |
 | first_name   | string       |

@@ -1,4 +1,4 @@
-package models;
+package org.kosmonova.model;
 
 import java.sql.Date;
 
@@ -7,27 +7,27 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String email;
-    private String phone;
     private Date hireDate;
     private int salary;
-    private String department;
+    private int departmentId;
+    private int projectId;
 
     public Employee(int id,
                     String firstName,
                     String lastName,
                     String email,
-                    String phone,
                     Date hireDate,
                     int salary,
-                    String department) {
+                    int departmentId,
+                    int projectId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.phone = phone;
         this.hireDate = hireDate;
         this.salary = salary;
-        this.department = department;
+        this.departmentId = departmentId;
+        this.projectId = projectId;
     }
 
     public int getId() {
@@ -44,14 +44,6 @@ public class Employee {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getLastName() {
@@ -86,19 +78,19 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getDepartment() {
-        return department;
+    public int getDepartmentId() {
+        return departmentId;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setDepartmentId(int departmentId) {
+        this.departmentId = departmentId;
     }
 
-    @Override
-    public String toString() {
-        return "Name: " + this.firstName + " " + this.lastName + "\n" +
-               "Salary: " + this.salary + "\n" +
-               "Department: " + this.department + "\n" +
-               "Date of hire: " + this.hireDate + "\n";
+    public int getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
     }
 }

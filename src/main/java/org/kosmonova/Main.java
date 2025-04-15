@@ -1,7 +1,6 @@
 package org.kosmonova;
 
-import data.HikariConnection;
-import models.Employee;
+import org.kosmonova.repository.HikariConnection;
 
 public class Main {
     public static void main(String[] args) {

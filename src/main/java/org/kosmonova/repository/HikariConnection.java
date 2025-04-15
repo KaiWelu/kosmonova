@@ -1,4 +1,4 @@
-package data;
+package org.kosmonova.repository;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
