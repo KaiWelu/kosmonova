@@ -9,8 +9,8 @@ CREATE DATABASE kosmonova_db
 
 -- create the department table
 CREATE TABLE departments (
-    department_id INT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    department_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE,
     city VARCHAR(100) NOT NULL,
     country VARCHAR(100) NOT NULL,
     continent VARCHAR(100) NOT NULL
@@ -18,16 +18,17 @@ CREATE TABLE departments (
 
 -- create agency table
 CREATE TABLE agencies (
-    agency_id INT PRIMARY KEY NOT NULL,
-    name VARCHAR(100) NOT NULL,
+    agency_id SERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(100) NOT NULL UNIQUE,
     country VARCHAR(100) NOT NULL,
-    continent VARCHAR(100) NOT NULL
+    continent VARCHAR(100) NOT NULL,
+    acronym VARCHAR(20) NOT NULL
 );
 
 -- create sites table
 CREATE TABLE sites (
     site_id INT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL UNIQUE,
     agency_id INT NOT NULL,
     country VARCHAR(100) NOT NULL,
     continent VARCHAR(100) NOT NULL,
@@ -40,7 +41,7 @@ CREATE TABLE sites (
 
 CREATE TABLE rockets (
     rocket_id INT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL UNIQUE,
     agency_id INT NOT NULL,
     launch_cost INT NOT NULL,
     payload_leo INT NOT NULL,
@@ -50,7 +51,7 @@ CREATE TABLE rockets (
 -- create missions table
 CREATE TABLE missions (
     mission_id INT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL UNIQUE,
     launch_date DATE NOT NULL,
     launch_site INT NOT NULL,
     agency_id INT NOT NULL,
