@@ -1,6 +1,6 @@
 package org.kosmonova;
 
-import org.kosmonova.repository.HikariConnection;
+import org.kosmonova.config.HikariConnection;
 
 public class Main {
     public static void main(String[] args) {
