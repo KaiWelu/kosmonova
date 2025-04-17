@@ -6,6 +6,7 @@ import org.kosmonova.repository.AgencyDAO;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
@@ -20,5 +21,13 @@ public class Main {
         // test agency
         Agency testAgency = new Agency("German Aerospace Center" , "Germany" , "Europe", "DLR");
         agencyDAO.create(testAgency);
+
+        List<Agency> testList = agencyDAO.getAll();
+        testList.forEach((agency -> System.out.println(agency.getName())));
+
+        Agency updateAgency = agencyDAO.get(2);
+        updateAgency.setContinent("Asia");
+        agencyDAO.update(updateAgency);
+        agencyDAO.delete(updateAgency);
     }
 }

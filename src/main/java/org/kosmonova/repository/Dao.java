@@ -9,12 +9,12 @@ public interface Dao<T> {
 
     T get(int id) throws SQLException;
 
-    List<T> getAll();
+    List<T> getAll() throws SQLException;
 
     void create(T t) throws SQLException;
 
-    void update(T t);
+    void update(T t) throws SQLException;
 
-    void delete(T t);
+    void delete(T t) throws SQLException;
 
 }
